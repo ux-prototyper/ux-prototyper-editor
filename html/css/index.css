@@ -63,7 +63,29 @@ body, html {
     display: table-row;
 }
 
-.main-container .left-panel .left-container .bottom-row{
+.main-container .left-panel .left-container .bottom-row {
     display: table-row;
     height: 50px;
 }
+
+.main-container .left-panel .left-container .component-info {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.main-container .left-panel .left-container .component-info:hover {
+    background-color: #eee;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
+
