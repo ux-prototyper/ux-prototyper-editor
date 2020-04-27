@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/index.css"/>
     <script type="text/javascript" src="./js/yaml.min.js"></script>
+    <script type="text/javascript" src="./js/components0.js"></script>
+    <script type="text/javascript" src="./js/renderer.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <title>Demo UX Prototyper</title>
 </head>
@@ -22,19 +24,7 @@
                     <div class="middle-panel">
                         <input placeholder="Search..." style="margin: 10px;"/>
                     </div>
-                    <div class="middle-panel">
-                        <div class="component-info noselect">
-                            Input-text
-                        </div>
-                        <div class="component-info noselect">
-                            Input-password
-                        </div>
-                        <div class="component-info noselect">
-                            Button
-                        </div>
-                        <div class="component-info noselect">
-                            Alert
-                        </div>
+                    <div class="middle-panel" id="list_components">
                     </div>
                 </div>
                 <div class="bottom-row">
@@ -44,8 +34,7 @@
         </div>
         <div class="center-panel">
             <div class="top-panel"></div>
-
-            <canvas id="show_design"></canvas>
+            <canvas id="show_design" width="500px" height="500px"></canvas>
             <div class="bottom-panel"></div>
         </div>
         <div class="right-panel">

@@ -15,11 +15,28 @@ function loadYamlFile(url, func) {
     }
 }
 
+function loadComponents() {
+  var el = document.getElementById('list_components');
+  for (var c_name in window.components) {
+    var c = window.components[c_name];
+    el.innerHTML += `<div class="component-info noselect">
+    ` + c["name"] + `
+    </div>`;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
-    loadYamlFile("./example.yaml", function(yamlText) {
-      console.log(yamlText);
-      nativeObject = YAML.parse(yamlText);
-      console.log(nativeObject);
-        // TODO apply
-    });
+  loadComponents();
+  // TODO scroll
+  // loadComponents()
+  // loadComponents()
+  // loadComponents()
+  initCanvas();
+
+  loadYamlFile("./example.yaml", function(yamlText) {
+    console.log(yamlText);
+    nativeObject = YAML.parse(yamlText);
+    console.log(nativeObject);
+      // TODO apply
+  });
 });
