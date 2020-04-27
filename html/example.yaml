@@ -1,0 +1,30 @@
+ux-prototyper-version: v0.0.1
+ux-prototyper-app: "demo-ux-prototyper"
+
+project:
+  name: "Example UX-Prototyper"
+  version: v0.0.1
+
+views:
+  login_view:
+    title: 
+    components:
+      logo:
+        type: image
+      username:
+        type: input-text
+        placeholder: "Username"
+      password:
+        type: input-password
+        placeholder: "Password"
+      signin:
+        type: button
+        caption: "Sign In"
+      errorText:
+        type: alert
+        caption: "Error Text Here"
+
+
+
+    
+
