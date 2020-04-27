@@ -1,0 +1,31 @@
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: table;
+} 
+
+.main-container .left-pannel {
+    display: table-cell;
+    border-right: 1px solid black;
+    width: 250px;
+}
+
+.main-container .center-pannel { 
+    display: table-cell;
+    border: 1px solid black;
+}
+
+.main-container .right-pannel { 
+    display: table-cell;
+    border-left: 1px solid black;
+    width: 250px;
+}
+
