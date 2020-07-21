@@ -3,6 +3,7 @@ body, html {
     padding: 0px;
     margin: 0px;
     height: 100%;
+    background-color: #5dffc3;
 }
 
 .main-container {
@@ -98,4 +99,49 @@ body, html {
 
 #show_design {
     margin: 10px;
+}
+
+.center-middle-panel {
+    height: calc(100% - 102px);
+    background-color: #5dffc3;
+    text-align: left;
+}
+
+.uxp-tabs {
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.uxp-tab {
+    display: inline-block;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    background-color: #3fcaa6;
+    cursor: pointer;
+}
+
+.uxp-tab.active {
+    background-color: #ffaf31;
+}
+
+.uxp-project-info {
+    padding: 10px;
+}
+
+.uxp-proj-view {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.uxp-proj-view:hover {
+    background-color: #3fcaa6
+}
+
+#yaml_conf {
+    padding: 20px;
 }

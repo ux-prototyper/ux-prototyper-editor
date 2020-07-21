@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html xmlns = "http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/index.css"/>
-    <script type="text/javascript" src="./js/yaml.min.js"></script>
-    <script type="text/javascript" src="./js/components0.js"></script>
-    <script type="text/javascript" src="./js/renderer.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
-    <title>Demo UX Prototyper</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/index.css"/>
+  <script type="text/javascript" src="./js/yaml.min.js"></script>
+  <script type="text/javascript" src="./js/components0.js"></script>
+  <script type="text/javascript" src="./js/renderer.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <title>UX Prototyper Editor</title>
 </head>
 <body>
-    <div class="main-container">
-        <div class="left-panel">
-            <div class="left-container">
-                <div class="top-row">
-                    <div class="top-panel">
-                        <img width=35px src="./img/logo.png"/ style="vertical-align: middle;">
-                        UX-Prototyper (v0.0.1)
-                    </div>
-                </div>
-                <div class="middle-row">
-                    <div class="middle-panel">
-                        <input placeholder="Search..." style="margin: 10px;"/>
-                    </div>
-                    <div class="middle-panel" id="list_components">
-                    </div>
-                </div>
-                <div class="bottom-row">
-                    <div class="bottom-panel"></div>
-                </div>
-            </div>
+  <div class="main-container">
+    <div class="left-panel">
+      <div class="left-container">
+        <div class="top-row">
+          <div class="top-panel">
+            <img width=35px src="./images/uxp-logo.png"/ style="vertical-align: middle;">
+            UX-Prototyper (v0.0.1)
+          </div>
         </div>
-        <div class="center-panel">
-            <div class="top-panel"></div>
-            <canvas id="show_design" width="500px" height="500px"></canvas>
-            <div class="bottom-panel"></div>
+        <div class="middle-row">
+          <div class="uxp-project-info">
+            <strong>Project:<br><span id="project_name"></span> (<span id="project_version"></span>)</strong>
+          </div>
+          Structure:
+          <div id="project_views">
+            
+          </div>
         </div>
-        <div class="right-panel">
-            <div class="top-panel"></div>
-            Right
-            <div class="bottom-panel"></div>
+        <div class="bottom-row">
+          <div class="bottom-panel"></div>
         </div>
+      </div>
     </div>
+      <div class="center-panel">
+        <div class="top-panel"></div>
+        <div class="center-middle-panel">
+          <div class="uxp-tabs">
+            <div class="uxp-tab active" id="tab_view_editor" onclick="switch_to_editor()">View Editor</div>
+            <div class="uxp-tab" id="tab_yaml" onclick="switch_to_yaml()">Yaml</div>
+          </div>
+          <canvas id="show_design" width="500px" height="500px"></canvas>
+          <pre id="yaml_conf" style="display: none;">
+ux-prototyper-version: v0.0.1
+ux-prototyper-app: "ux-prototyper-editor"
+
+project:
+  name: "Example UX-Prototyper"
+  version: v0.0.1
+
+views:
+  - id: loginView
+    title: "Sign-In"
+    components:
+      - id: logo
+        type: image
+      - id: username:
+        type: input-text
+        placeholder: "Username"
+      - id: password
+        type: input-password
+        placeholder: "Password"
+      - id: signin
+        type: button
+        caption: "Sign In"
+      - id: errorText
+        type: alert
+        caption: "Error Text Here"
+  - id: registrationView
+    title: "Sign-Up"
+    components:
+      - id: logo
+        type: image
+      - id: username:
+        type: input-text
+        placeholder: "Username"
+      - id: password
+        type: input-password
+        placeholder: "Password"
+      - id: signin
+        type: button
+        caption: "Sign In"
+      - id: errorText
+        type: alert
+        caption: "Error Text Here"
+</pre>
+      </div>
+      <div class="bottom-panel"></div>
+    </div>
+    <div class="right-panel">
+      <div class="top-panel"></div>
+        <div class="middle-panel">
+          <input placeholder="Search..." style="margin: 10px;"/>
+        </div>
+        <div class="middle-panel" id="list_components">
+        </div>
+      <div class="bottom-panel"></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ux-prototyper-version: v0.0.1
-ux-prototyper-app: "demo-ux-prototyper"
+ux-prototyper-app: "ux-prototyper-editor"
 
 project:
   name: "Example UX-Prototyper"
@@ -9,9 +9,9 @@ views:
   login_view:
     title: 
     components:
-      logo:
+      - id: logo
         type: image
-      username:
+      - id: username
         type: input-text
         placeholder: "Username"
       password:
